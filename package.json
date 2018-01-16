@@ -1,0 +1,27 @@
+{
+  "name": "wedding-site",
+  "version": "1.0.0",
+  "description": "Wedding site for Brian and Jamie",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "wedding",
+    "brian",
+    "jamie",
+    "denver",
+    "dac",
+    "rooftop",
+    "downtown",
+    "august",
+    "summer"
+  ],
+  "author": "brian dumoulin",
+  "license": "ISC"
+}
