@@ -185,6 +185,21 @@
 
 	});
 
+	$('#contactForm').ready(function (){
+      $("#rsvp").change(function() {
+          // foo is the id of the other select box
+          if ($(this).val() == "yes") {
+              $("#dinner1").show();
+							if ($('#contactName2').val().length > 0){
+								$("#dinner2").show();
+							}
+          } else{
+              $("#dinner1").hide();
+							$("#dinner2").hide();
+          }
+      });
+  });
+
 
 	/*----------------------------------------------------*/
 	/* Final Countdown Settings

@@ -6,7 +6,7 @@
 
    <!--- basic page needs
    ================================================== -->
-   <meta charset="utf-8">
+  <meta charset="utf-8">
 	<title>Brian & Jamie</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -27,7 +27,7 @@
 
    <!-- favicons
 	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="icon" type="image/png" href="favicon.ico">
 
 </head>
 
@@ -255,7 +255,7 @@
 
 					   			<h1>Let Us Know</h1>
 
-					   			<p class="lead">To save you a trip to the Post Office you can RSVP here. The functionality will be available when the invitations are sent out.</p>
+					   			<p class="lead">To save you a trip to the Post Office you can RSVP here.</p>
 
 					   		</div>
 					   	</div> <!-- /tab-content-intro -->
@@ -268,26 +268,34 @@
 					      			<fieldset>
 
 					                  <div class="form-field">
-					 						   <input name="contactName" type="text" id="contactName" placeholder="Guest 1" value="" minlength="2" required="">
+					 						   <input name="contactName" type="text" id="contactName" placeholder="Guest 1" minlength="2" required="">
 					                  </div>
                             <div class="form-field">
-					 						   <input name="contactName2" type="text" id="contactName2" placeholder="Guest 2" value="" minlength="2">
+					 						   <input name="contactName2" type="text" id="contactName2" placeholder="Guest 2" minlength="2">
 					                  </div>
                             <div id="rsvp" class="form-field">
-                              <select name="rsvp" value="">
+                              <select name="rsvp">
                                 <option value="none">Please let us know...</option>
                                 <option value="yes">Yes, I/We will be attending!</option>
                                 <option value="no">No, unfortuanately I/we cannot make it.</option>
                               </select>
 						               </div>
-					                  <div id="dinner" class="form-field dinner">
-                              <select name="dinner" value="">
-                                <option value="none">Please choose a dinner option...</option>
-                                <option value="steak">Steak</option>
+					                  <div id="dinner1" class="form-field">
+                              <select name="dinner">
+                                <option value="none">Please choose a dinner option for Guest 1...</option>
+                                <option value="steak">Beef</option>
                                 <option value="chicken">Chicken</option>
-                                <option value="veggie">Veggie</option>
+                                <option value="veggie">Vegetarian</option>
                               </select>
 						               </div>
+                           <div id="dinner2" class="form-field">
+                             <select name="dinner" value="">
+                               <option value="none">Please choose a dinner option for Guest 2...</option>
+                               <option value="steak">Beef</option>
+                               <option value="chicken">Chicken</option>
+                               <option value="veggie">Vegetarian</option>
+                             </select>
+                          </div>
 					                 <div class="form-field">
 					                     <button class="submitForm button button-primary large">Submit</button>
 
@@ -402,22 +410,11 @@
    ================================================== -->
    <footer>
 
-   	<div class="social-wrap">
-   		<div class="row">
-        <p class="hashtag">#hashtaggoeshere</p>
-			</div> <!-- /row -->
-   	</div> <!-- /social-wrap -->
-
    	<div class="footer-bottom">
 
       <div class="footer-logo">
-					<img src="images/footer-logo.png" alt="">
+        <p class="hashtag">#BrianAndJamie2018</p>
 			</div>
-
-   		<div class="copyright">
-		     	<span>© Copyright Khronos 2016.</span>
-		     	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
-		   </div>
 
    	</div> <!-- /footer-bottom -->
 

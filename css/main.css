@@ -143,7 +143,7 @@ p.lead {
 }
 p.hashtag{
 	text-align: center;
-	color: white;
+	color: black;
 	font-weight: bold;
 	font-size: 48px;
 	margin-top: 3rem;
@@ -1566,6 +1566,10 @@ header .social-links ul li a:focus {
 	display: block;
 }
 
+#dinner1, #dinner2 {
+	display: none;
+}
+
 /* -------------------------------------------------------------------
  * loader animation - (_layout.scss)
  * ------------------------------------------------------------------- */
@@ -1769,7 +1773,6 @@ footer .footer-bottom a:focus {
 
 footer .footer-bottom .footer-logo {
 	display: inline-block;
-	width: 150px;
 }
 
 footer .copyright {
