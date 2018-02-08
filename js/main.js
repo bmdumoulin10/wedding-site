@@ -185,10 +185,9 @@
 
 	});
 
-	$('#contactForm').ready(function (){
-      $("#rsvp").change(function() {
-          // foo is the id of the other select box
-          if ($(this).val() == "yes") {
+	// Dynamic RSVP form for dinner selection
+	$('#contactForm').on('change', function (e){
+          if ($('#rsvp').val() == "yes") {
               $("#dinner1").show();
 							if ($('#contactName2').val().length > 0){
 								$("#dinner2").show();
@@ -197,7 +196,6 @@
               $("#dinner1").hide();
 							$("#dinner2").hide();
           }
-      });
   });
 
 
