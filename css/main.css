@@ -149,7 +149,7 @@ p.hotel{
 }
 p.hashtag{
 	text-align: center;
-	color: black;
+	color: white;
 	font-weight: bold;
 	font-size: 48px;
 	margin-top: 3rem;
@@ -1719,6 +1719,7 @@ footer {
 	text-align: center;
 	padding-bottom: 12rem;
 	position: relative;
+	background-color: black;
 }
 
 footer .social-wrap {

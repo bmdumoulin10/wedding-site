@@ -187,9 +187,9 @@
 
 	// Dynamic RSVP form for dinner selection
 	$('#contactForm').on('change', function (e){
-          if ($('#rsvp').val() == "yes") {
+          if ($('#rsvp').val() == "Yes") {
               $("#dinner1").show();
-							if ($('#contactName2').val().length > 0){
+							if ($('#contactName2').val().length > 1){
 								$("#dinner2").show();
 							}
           } else{
@@ -202,7 +202,7 @@
 	/*----------------------------------------------------*/
 	/* Final Countdown Settings
 	------------------------------------------------------ */
-	var finalDate = '2018/08/11';
+	var finalDate = '08/11/2018 17:30:00';
 
 	$('div#counter').countdown(finalDate)
    	.on('update.countdown', function(event) {

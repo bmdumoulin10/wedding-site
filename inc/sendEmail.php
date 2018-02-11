@@ -1,43 +1,56 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'user@website.com';
+$siteOwnersEmail = 'bmdumoulin10@gmail.com';
 
 
 if($_POST) {
 
-   $name = trim(stripslashes($_POST['contactName']));
-   $email = trim(stripslashes($_POST['contactEmail']));
-   $subject = trim(stripslashes($_POST['contactSubject']));
-   $contact_message = trim(stripslashes($_POST['contactMessage']));
+  $email = 'gunderja@gmail.com';
+  $name_one = trim(stripslashes($_POST['contactName']));
+  $name_two = trim(stripslashes($_POST['contactName2']));
+  $rsvp = trim(stripslashes($_POST['rsvp']));
+  $dinner_one = trim(stripslashes($_POST['dinner1']));
+  $dinner_two = trim(stripslashes($_POST['dinner2']));
+  $subject = "Online Wedding RSVP";
 
-   // Check Name
-	if (strlen($name) < 2) {
-		$error['name'] = "Please enter your name.";
+  // Check Guest 1 Name
+	if (strlen($name_one) < 2) {
+		$error['name_one'] = "Please enter a name for Guest 1.";
 	}
-	// Check Email
-	if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
-		$error['email'] = "Please enter a valid email address.";
-	}
-	// Check Message
-	if (strlen($contact_message) < 15) {
-		$error['message'] = "Please enter your message. It should have at least 15 characters.";
-	}
-   // Subject
-	if ($subject == '') { $subject = "Contact Form Submission"; }
+  // Check RSVP
+  if (.$rsvp == 'None') {
+    $error['rsvp'] = "Please choose an RSVP response.";
+  }
+	// If No Guest 2
+  if ($name_two == '' || strlen($name_two) < 2) {
+    $name_two = "None";
+    $dinner_two = "None";
+  }
 
-
-   // Set Message
-   $message .= "Email from: " . $name . "<br />";
-	$message .= "Email address: " . $email . "<br />";
-   $message .= "Message: <br />";
-   $message .= $contact_message;
-   $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
+  // Set Message
+  $message .= "Email from: " . $name_one . "<br />";
+  // Not Attending
+  if (.$rsvp == 'No') {
+    $message .= "Unfortuanately I/We will not be able to attend your wedding. Thank you for the invite. <br />";
+    $message .= "Guest 1: " . $name_one . "<br />";
+    $message .= "Guest 1 Dinner: " . $dinner_one . "<br />";
+    $message .= "Guest 2: " . $name_two . "<br />";
+    $message .= "Guest21 Dinner: " . $dinner_two . "<br />";
+  // Attending
+  } else {
+    $message .= "I/We am/are beyond excited to attend your wedding. We cannot wait to celebrate with you. <br />";
+    $message .= "Guest 1: " . $name_one . "<br />";
+    $message .= "Guest 1 Dinner: " . $dinner_one . "<br />";
+    $message .= "Guest 2: " . $name_two . "<br />";
+    $message .= "Guest 2 Dinner: " . $dinner_two . "<br />";
+  }
+  $message .= "<br /> ----- <br /> This email was sent from your Wedding site's RSVP form. For further questions regarding the Guest, reach out to them directly as a reply to this email will not reach them.<br />";
 
    // Set From: header
-   $from =  $name . " <" . $email . ">";
+  $from =  $siteOwnersEmail;
 
-   // Email Headers
+  // Email Headers
 	$headers = "From: " . $from . "\r\n";
 	$headers .= "Reply-To: ". $email . "\r\n";
  	$headers .= "MIME-Version: 1.0\r\n";
@@ -51,15 +64,14 @@ if($_POST) {
 
 		if ($mail) { echo "OK"; }
       else { echo "Something went wrong. Please try again."; }
-		
+
 	} # end if - no validation error
 
 	else {
 
-		$response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
-		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
-		$response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
-		
+		$response = (isset($error['name_one'])) ? $error['name_one'] . "<br /> \n" : null;
+		$response .= (isset($error['rsvp'])) ? $error['rsvp'] . "<br /> \n" : null;
+
 		echo $response;
 
 	} # end if - there was a validation error
