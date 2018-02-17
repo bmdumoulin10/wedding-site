@@ -155,6 +155,15 @@ p.hashtag{
 	margin-top: 3rem;
 }
 @media only screen and (max-width:768px) {
+	p.hashtag{
+		text-align: center;
+		color: white;
+		font-weight: bold;
+		font-size: 36px;
+		margin-top: 3rem;
+	}
+}
+@media only screen and (max-width:768px) {
 	p.lead {
 		font-size: 1.8rem;
 	}
@@ -1572,7 +1581,7 @@ header .social-links ul li a:focus {
 	display: block;
 }
 
-#dinner1, #dinner2 {
+#mce-DONE, #mce-DTWO {
 	display: none;
 }
 
@@ -1861,7 +1870,7 @@ footer .back-to-top a i {
 		font-size: 1.4rem;
 	}
 	footer .footer-bottom .footer-logo {
-		width: 140px;
+		width: 100%;
 	}
 }
 @media only screen and (max-width:600px) {
@@ -1878,7 +1887,7 @@ footer .back-to-top a i {
 		font-size: 1.3rem;
 	}
 	footer .footer-bottom .footer-logo {
-		width: 130px;
+		width: 100%;
 	}
 	footer .copyright span {
 		display: block;
@@ -1900,7 +1909,7 @@ footer .back-to-top a i {
 		padding: 4.8rem 1.1rem 4.8rem;
 	}
 	footer .footer-bottom .footer-logo {
-		width: 120px;
+		width: 100%;
 	}
 	footer .back-to-top a {
 		padding: 1.2rem 2.3rem 1.5rem;

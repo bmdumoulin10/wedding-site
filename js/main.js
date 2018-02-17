@@ -102,7 +102,7 @@
 	------------------------------------------------------ */
 
 	// Example MailChimp url: http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
-	var mailChimpURL = 'http://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e65110b38d'
+	var mailChimpURL = 'https://brianandjamiewed.us17.list-manage.com/subscribe/post?u=3dde601a119ed5f244b079f00&amp;id=93458aa2c9'
 
 	$('#mc-form').ajaxChimp({
 
@@ -186,15 +186,16 @@
 	});
 
 	// Dynamic RSVP form for dinner selection
-	$('#contactForm').on('change', function (e){
-          if ($('#rsvp').val() == "Yes") {
-              $("#dinner1").show();
-							if ($('#contactName2').val().length > 1){
-								$("#dinner2").show();
+	$('#mc-form').on('change', function (e){
+		console.log(e.target, e.target.value);
+          if ($('#mce-RSVP').val() == "yes") {
+              $("#mce-DONE").show();
+							if ($('#mce-GTWO').val().length > 1){
+								$("#mce-DTWO").show();
 							}
           } else{
-              $("#dinner1").hide();
-							$("#dinner2").hide();
+              $("#mce-DONE").hide();
+							$("#mce-DTWO").hide();
           }
   });
 

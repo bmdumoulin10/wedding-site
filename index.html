@@ -263,61 +263,56 @@
 					   		<div class="col-twelve">
 
 					            <!-- form -->
-					            <form name="contactForm" id="contactForm" method="post" action="">
+					            <form name="mc-form" id="mc-form" novalidate="true">
 					      			<fieldset>
 
-					                  <div class="form-field">
-					 						   <input name="contactName" type="text" id="contactName" placeholder="Guest 1" minlength="2" required="">
-					                  </div>
-                            <div class="form-field">
-					 						   <input name="contactName2" type="text" id="contactName2" placeholder="Guest 2" minlength="2">
-					                  </div>
-                            <div class="form-field">
-                              <select id="rsvp" name="rsvp">
-                                <option value="None">Please let us know...</option>
-                                <option value="Yes">Yes, I/We will be attending!</option>
-                                <option value="No">No, unfortuanately I/we cannot make it.</option>
-                              </select>
-						               </div>
-					                  <div class="form-field">
-                              <select id="dinner1" name="dinner">
-                                <option value="None">Please choose a dinner option for Guest 1...</option>
-                                <option value="Beef">Beef</option>
-                                <option value="Chicken">Chicken</option>
-                                <option value="Veggie">Vegetarian</option>
-                              </select>
-						               </div>
-                           <div class="form-field">
-                             <select id="dinner2" name="dinner" value="">
-                               <option value="None">Please choose a dinner option for Guest 2...</option>
-                               <option value="Beef">Beef</option>
-                               <option value="Chicken">Chicken</option>
-                               <option value="Veggie">Vegetarian</option>
-                             </select>
-                          </div>
-					                 <div class="form-field">
-					                     <button class="submitForm button button-primary large">Submit</button>
-
-					                     <div id="submit-loader">
-					                        <div class="text-loader">Sending...</div>
-					       				      <div class="s-loader">
-													  	<div class="bounce1"></div>
-													  	<div class="bounce2"></div>
-													  	<div class="bounce3"></div>
-													</div>
-												</div><!-- submit-loader -->
-					                  </div>
+                        <div class="form-field">
+                         <input type="email" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL">
+                        </div>
+                        <div class="form-field">
+					 						   <input type="text" placeholder="Guest 1" name="GONE" id="mce-GONE">
+			                  </div>
+                        <div class="form-field">
+                          <select id="mce-DONE" name="DONE">
+                            <option value="none">Please choose a dinner option for Guest 1...</option>
+                            <option value="beef">Beef</option>
+                            <option value="chicken">Chicken</option>
+                            <option value="veggie">Vegetarian</option>
+                          </select>
+					              </div>
+                        <div class="form-field">
+					 						   <input type="text" placeholder="Guest 2" name="GTWO" id="mce-GTWO">
+			                  </div>
+                        <div class="form-field">
+                          <select id="mce-DTWO" name="DTWO">
+                            <option value="none">Please choose a dinner option for Guest 2...</option>
+                            <option value="beef">Beef</option>
+                            <option value="chicken">Chicken</option>
+                            <option value="veggie">Vegetarian</option>
+                          </select>
+                        </div>
+                        <div class="form-field">
+                          <select id="mce-RSVP" name="RSVP">
+                            <option value="none">Please let us know...</option>
+                            <option value="yes">Yes, I/We will be attending!</option>
+                            <option value="no">No, unfortuanately I/we cannot make it.</option>
+                          </select>
+					              </div>
+				                <div class="form-field">
+			                   <input type="submit" value="Submit RSVP" name="subscribe" class="button button-primary large">
+				                </div>
 
 					      			</fieldset>
-					      		</form> <!-- /form -->
+					      		</form>
+                    <!-- /form -->
 
 					            <!-- contact-warning -->
-					            <div id="message-warning">
-					            </div>
+					            <!-- <div id="message-warning">
+					            </div> -->
 					            <!-- contact-success -->
-					      		<div id="message-success">
+					      		<!-- <div id="message-success">
 					               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-					      		</div>
+					      		</div> -->
 
 					         </div> <!-- /col-twelve -->
 					   	</div> <!-- /row contact-form -->
@@ -346,14 +341,12 @@
 					   	<div class="row form-wrap tab-entry-content">
 					   		<div class="col-twelve">
 
-					   			<form id="mc-form" class="group" novalidate="true">
+					   			<form>
 
 							   		<div class="form-field">
 							   			<!-- <input type="submit" value="Go To Registry" name="subscribe" class="button button-primary large"> -->
                       <a href="http://www.wanderable.com/hm/BrianandJamie20180115f319" target="_blank"><button type="button" name="subscribe" class="button">Go To Registry</button></a>
 							   		</div>
-
-							   		<label for="mce-EMAIL" class="subscribe-message"></label>
 
 									</form>
 
@@ -389,12 +382,14 @@
                   <a href="https://aws.passkey.com/event/49591053/owner/14113566/home" target="_blank">Click Here</a> to make a reservation at Hyatt Place.<br>
                   <span class="hyatt">Hyatt House:</span> Suite style rooms with kitchenettes for $199/night. (Available Friday August 10 & Saturday August 11)<br>
                   <a href="https://aws.passkey.com/event/49591138/owner/14292866/home" target="_blank">Click Here</a> to make a reservation for Hyatt House.<br>
-                  ****IF THE NIGHTS YOU ARE TRYING TO BOOK ARE NOT AVAILABLE PLEASE CONTACT BRIAN OR JAMIE AND THEY WILL SEE IF THE HOTEL CAN OPEN UP MORE AVAILABILITY****</p>
+                  ****IF THE NIGHTS YOU ARE TRYING TO BOOK AT THE HYATT ARE NOT AVAILABLE PLEASE CONTACT BRIAN OR JAMIE AND THEY WILL SEE IF THE HOTEL CAN OPEN UP MORE AVAILABILITY****</p>
 
-                  <p class="lead hotel">Two things we enjoy doing during the summer months in Denver are going to concerts at the beautiful Red Rocks Amphitheater and attending Colorado Rockies games. If concerts and baseball games are not your thing, there is plenty more to do while in Denver.<br>
+                  <p class="lead hotel">There are many other hotel options in Denver, as well as rentals available through <a href="https://www.airbnb.com/s/Denver--CO--United-States/homes?checkin=2018-08-09&checkout=2018-08-12&place_id=ChIJzxcfI6qAa4cR1jaKJ_j0jhE&refinement_paths%5B%5D=%2Fhomes&allow_override%5B%5D=&s_tag=wZn47kTW" target="_blank">Airbnb</a> and <a href="https://www.homeaway.com/results/region:8338/keywords:Denver%2C+CO%2C+USA/arrival:2018-08-09/departure:2018-08-12/page:1" target="_blank">Home Away</a> if you'd like to shop around.</p>
+
+                  <p class="lead hotel">Two things we enjoy doing during the summer months in Denver are going to concerts at the legendary Red Rocks Amphitheater and attending Colorado Rockies games. If concerts and baseball games are not your thing, there is plenty more to do while in Denver.<br>
                   <span class="hyatt">Red Rocks:</span><br> <a href="http://redrocksonline.com/concerts-events/calendar/2018/08" target="_blank">Click Here</a> to be re-directed to the Red Rocks calendar for August 2018. Keep in mind they continue to update their schedule so check back occasionally if you do not see a show you are interested in.<br>
                   <span class="hyatt">Rockies Games:</span><br> <a href="https://www.mlb.com/rockies/schedule/2018-08?mlbkw=ds-g-p29720748299&gclid=EAIaIQobChMIhNj8hIKN2QIVC7XACh3kTgTsEAAYASABEgLTGvD_BwE" target="_blank">Click Here</a> to be re-directed to the Colorado Rockies schedule for August 2018. Coors field is awesome and single game tickets start at $6.<br>
-                  <span class="hyatt">Visit Denver:</span><br> <a href="https://www.denver.org/" target="_blank">Click Here</a> to be re-directed to the Vist Denver site. This soite stays up-to-date with all things Denver.</p>
+                  <span class="hyatt">Visit Denver:</span><br> <a href="https://www.denver.org/" target="_blank">Click Here</a> to be re-directed to the Vist Denver site. This site stays up-to-date with all things Denver.</p>
 
 					   		</div>
 					   	</div> <!-- /tab-content-intro -->
@@ -436,7 +431,7 @@
    	</div> <!-- /footer-bottom -->
 
     <div class="copyright">
-        <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	
+        <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
      </div>
 
    	<div class="back-to-top">
