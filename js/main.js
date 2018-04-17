@@ -188,15 +188,18 @@
 	// Dynamic RSVP form for dinner selection
 	$('#mc-form').on('change', function (e){
 		console.log(e.target, e.target.value);
-          if ($('#mce-RSVP').val() == "yes") {
+		// Guest 1
+          if ($('#mce-GONE').val().length > 1 && $('#mce-RSVP').val() == "yes") {
               $("#mce-DONE").show();
-							if ($('#mce-GTWO').val().length > 1){
-								$("#mce-DTWO").show();
-							}
-          } else{
+          } else {
               $("#mce-DONE").hide();
-							$("#mce-DTWO").hide();
           }
+		// Guest 2
+					if ($('#mce-GTWO').val().length > 1 && $('#mce-RSVPTWO').val() == "yes") {
+							$("#mce-DTWO").show();
+					} else {
+							$("#mce-DTWO").hide();
+					}
   });
 
 
